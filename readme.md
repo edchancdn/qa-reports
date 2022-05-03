@@ -1,4 +1,7 @@
 ### Exercise on using Extent as a reporting framework
+A simple implementation of using Extent as a reporting framework.
+In this version, each action is logged as a step in a test case.
+
 Run testing.xml to execute the test suite.
 
 Alternatively, each test case can be executed independently.
