@@ -14,3 +14,5 @@ View the report file in a browser.
 
 **Dependencies:**
 TestNG, Selenium, WebDriverManager, Extent
+
+![img.png](readme_img.png)
