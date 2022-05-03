@@ -83,7 +83,7 @@ public class ZoomTest {
         Assert.assertEquals(driver.getTitle(), "Video Conferencing, Cloud Phone, Webinars, Chat, Virtual Events | Zoom");
         logger.pass("Zoom site loaded");
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#btnJoinMeeting"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#btnJoinMeeting"))).click();
         logger.pass("Click on Join link");
 
         Assert.assertEquals(driver.getTitle(), "Join Meeting - Zoom");
@@ -113,14 +113,14 @@ public class ZoomTest {
         Assert.assertEquals(driver.getTitle(), "Video Conferencing, Cloud Phone, Webinars, Chat, Virtual Events | Zoom");
         logger.pass("Zoom site loaded");
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.top-contactsales.top-sales[href='https://explore.zoom.us/contactsales']"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.top-contactsales.top-sales[href='https://explore.zoom.us/contactsales']"))).click();
         logger.pass("Click on Contact Sales link");
 
         Assert.assertEquals(driver.getTitle(), "Contact Sales | Zoom");
         logger.pass("Contact Sales page loaded");
 
-        // Intentionally set email value here to an invalid format
-        // to showcase screen capture attachment in report.
+        // Intentionally set email value here to an invalid format to showcase screen capture attachment in report.
+        // To pass this step, change the sendKeys value to johndoe@mail.com
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email"))).sendKeys("johndoe#mail.com", Keys.TAB);
         Assert.assertFalse(webElementExists(By.cssSelector("span[for='email'][class='has-error help-block']")), "Invalid email address format entered. \n ");
         logger.pass("Enter valid work email address in input box");
