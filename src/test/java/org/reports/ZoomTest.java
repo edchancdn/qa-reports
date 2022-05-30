@@ -121,7 +121,7 @@ public class ZoomTest {
 
         // Intentionally set email value here to an invalid format to showcase screen capture attachment in report.
         // To pass this step, change the sendKeys value to johndoe@mail.com
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email"))).sendKeys("johndoe#mail.com", Keys.TAB);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email"))).sendKeys("johndoe@mail.com", Keys.TAB);
         Assert.assertFalse(webElementExists(By.cssSelector("span[for='email'][class='has-error help-block']")), "Invalid email address format entered. \n ");
         logger.pass("Enter valid work email address in input box");
 
