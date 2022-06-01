@@ -43,6 +43,7 @@ public class ZoomTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
+        options.setExperimentalOption("useAutomationExtension", false);
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
