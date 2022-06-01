@@ -44,12 +44,11 @@ public class ZoomTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        options.setExperimentalOption("useAutomationExtension", false);
-
+        
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
     }
 
     @AfterMethod
