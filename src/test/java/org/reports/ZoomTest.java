@@ -40,7 +40,7 @@ public class ZoomTest {
         extent.attachReporter(htmlReporter);
 
         ChromeOptions options = new ChromeOptions();
-        options.setBinary(/usr/bin/google-chrome);
+        options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
