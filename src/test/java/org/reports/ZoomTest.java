@@ -40,7 +40,7 @@ public class ZoomTest {
         extent.attachReporter(htmlReporter);
 
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+        //options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
@@ -48,7 +48,7 @@ public class ZoomTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @AfterMethod
